@@ -13,17 +13,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
   <header class="site-header">
     <a class="brand" href="index.html">Poisiniously</a>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="socials.html" class="active">Socials</a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="socials.html">Socials</a>
     </nav>
+
+    <button class="menu-toggle" aria-label="Open menu"
+            aria-expanded="false" aria-controls="mobile-menu">
+        ☰
+    </button>
   </header>
+
+<div class="menu-overlay"></div>
+
+<nav class="mobile-menu" id="mobile-menu"
+     aria-label="Mobile navigation">
+    <button class="menu-close" aria-label="Close menu">✕</button>
+    <a href="index.html" class="active">Home</a>
+    <a href="socials.html">Socials</a>
+</nav>
+
 
   <main>
     <section class="socials">
