@@ -137,6 +137,28 @@ a {
     gap: 16px;
 }
 
+#page-content {
+    display: block;
+}
+
+.socials-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
 /*<!--made by AI*/
 /* mobile layout */
 @media (max-width: 600px) {
