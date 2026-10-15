@@ -41,10 +41,10 @@ a {
 }
 
 .brand {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 800;
   text-decoration: none;
-  color: var(--text-color);
+  color: FF8C00;
 }
 
 .site-header nav {
