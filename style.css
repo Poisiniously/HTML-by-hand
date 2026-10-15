@@ -3,14 +3,14 @@
   --bg-color: #eeeeee;
   --text-color: #111111;
   --accent-color: #FF8C00;
-  --card-bg: #f5f5f7
+  --card-bg: #f5f5f7;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #111111;
     --text-color: #eeeeee;
     --accent-color: #FF8C00;
-    --card-bg: #1e1e1e
+    --card-bg: #1e1e1e;
   }
 }
 
@@ -18,7 +18,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Roboto Mono', monospace;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Macht den Wechsel geschmeidig */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .card {
