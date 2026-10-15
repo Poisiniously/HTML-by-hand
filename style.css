@@ -44,7 +44,7 @@ a {
   font-size: 1.6rem;
   font-weight: 800;
   text-decoration: none;
-  color: var(--title-color);
+  color: var(--accent-color);
 }
 
 .site-header nav {
