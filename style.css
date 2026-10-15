@@ -1,0 +1,20 @@
+:root {
+  --bg-color: #eeeeee;
+  --text-color: #111111;
+  --accent-color: #0066cc;
+  --card-bg: #f5f5f7
+}
+@media (pref-color-scheme: dark) {
+  :root {
+    --bg-color: #111111;
+    --text-color: #eeeeee;
+    --accent-color: #ff8833;
+    --card-bg: #1e1e1e
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  
