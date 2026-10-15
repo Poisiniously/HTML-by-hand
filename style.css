@@ -16,5 +16,16 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: roboto-mono;
-  
+  font-family: 'Roboto Mono', monospace;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Macht den Wechsel geschmeidig */
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+a {
+  color: var(--accent-color);
+}
