@@ -1,4 +1,4 @@
-//made by AI
+//made by AI because i can´t java script
 const menuToggle = document.querySelector(".menu-toggle");
 const menuClose = document.querySelector(".menu-close");
 const menuOverlay = document.querySelector(".menu-overlay");
@@ -23,3 +23,27 @@ if (menuToggle && menuClose && menuOverlay) {
         }
     });
 }
+
+
+document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener("click", event => {
+        const url = new URL(link.href, window.location.href);
+
+        if (
+            url.origin !== window.location.origin ||
+            url.pathname === window.location.pathname ||
+            event.ctrlKey || event.metaKey || event.shiftKey ||
+            event.altKey || event.button !== 0 ||
+            link.target === "_blank"
+        ) {
+            return;
+        }
+
+        event.preventDefault();
+        document.body.classList.add("page-leaving");
+
+        setTimeout(() => {
+            window.location.href = url.href;
+        }, 200);
+    });
+});
