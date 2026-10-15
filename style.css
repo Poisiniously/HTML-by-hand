@@ -46,7 +46,7 @@ a {
   font-size: 1.6rem;
   font-weight: 800;
   text-decoration: none;
-  color: FF8C00;
+  color: var(--title-color);
 }
 
 .site-header nav {
