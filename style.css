@@ -30,3 +30,35 @@ body {
 a {
   color: var(--accent-color);
 }
+
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  border-bottom: 1px solid #343447;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.site-header nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-header nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-header nav a:hover {
+  color: var(--accent-color);
+}
+
