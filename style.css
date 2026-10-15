@@ -2,7 +2,7 @@
   color-scheme: light dark;
   --bg-color: #eeeeee;
   --text-color: #111111;
-  --accent-color: #FF8C00;
+  --accent-color: #7C3AED;
   --card-bg: #f5f5f7;
   --border-color: #343447;
 }
@@ -10,14 +10,12 @@
   :root {
     --bg-color: #111111;
     --text-color: #eeeeee;
-    --accent-color: #FF8C00;
     --card-bg: #1e1e1e;
     --border-color: #aaaaaa;
   }
 }
 
 body {
-  background: linear-gradient(skyblue, darkblue):
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Roboto Mono', monospace;
@@ -31,7 +29,7 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--text-color);
 }
 
 
@@ -44,10 +42,12 @@ a {
 }
 
 .brand {
-  font-size: 1.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2em;
   font-weight: 700;
   text-decoration: none;
   color: var(--accent-color);
+  height: 40px;
 }
 
 .site-header nav {
@@ -80,4 +80,11 @@ a {
 
 .socials {
   border: var(--border-color) 1px solid;
+  width: 400px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: center;
+  background-color: var(--card-bg);
+  border-radius: 10px;
 }
