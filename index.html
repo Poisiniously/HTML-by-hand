@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Poisiniously</title>
-  <meta charset="UTF-8">
-  <meta name="author" content="Poisiniously">
-  <meta name="description" content="Poisiniously´s Website: Start">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <link rel="stylesheet" href="style.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=B612+Mono:regular,italic,700,700italic" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="author" content="Poisiniously">
+    <meta name="description" content="Poisiniously's Website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    <title>Poisiniously</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css?family=B612+Mono:regular,italic,700,700italic"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
-  
-<header class="site-header">
-    <a class="brand" href="index.html">Poisiniously</a>
+    <!-- Permanent header -->
+    <header class="site-header">
+        <a class="brand" href="#home">Poisiniously</a>
 
-    <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="socials.html">Socials</a>
-    </nav>
+        <nav class="desktop-nav" aria-label="Main navigation">
+            <a href="#home" class="active" data-page="home">Home</a>
+            <a href="#socials" data-page="socials">Socials</a>
+        </nav>
 
-    <button class="menu-toggle"
+        <button
+            class="menu-toggle"
             aria-label="Open menu"
             aria-expanded="false"
-            aria-controls="mobile-menu">
-        ☰
-    </button>
-</header>
+            aria-controls="mobile-menu"
+            type="button"
+        >
+            ☰
+        </button>
+    </header>
 
-<div class="menu-overlay"></div>
+    <!-- Mobile navigation -->
+    <div class="menu-overlay"></div>
 
-<nav class="mobile-menu" id="mobile-menu"
-    aria-label="Mobile navigation">
-    <button class="menu-close" aria-label="Close menu">✕</button>
-    <a href="index.html" class="active">Home</a>
-    <a href="socials.html">Socials</a>
-</nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <button class="menu-close" aria-label="Close menu" type="button">
+            ✕
+        </button>
 
+        <a href="#home" class="active" data-page="home">Home</a>
+        <a href="#socials" data-page="socials">Socials</a>
+    </nav>
 
-  <main>
-    <section>
-      
-    </section>
-  </main>
+    <!-- Only this content changes -->
+    <main id="page-content">
+        <p>Loading...</p>
+    </main>
 
-  <footer>
-    
-  </footer>
-<script src="script.js" defer></script>
+    <!-- Permanent footer -->
+    <footer class="site-footer">
+        <span>© 2026 Poisiniously</span>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
+</html>
