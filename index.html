@@ -16,13 +16,32 @@
   <link href="https://fonts.googleapis.com/css?family=B612+Mono:regular,italic,700,700italic" rel="stylesheet" />
 </head>
 <body>
-  <header class="site-header">
+  
+<header class="site-header">
     <a class="brand" href="index.html">Poisiniously</a>
-    <nav aria-label="Main navigation">
-      <a href="index.html" class="active">Home</a>
-      <a href="socials.html">Socials</a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="socials.html">Socials</a>
     </nav>
-  </header>
+
+    <button class="menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+        ☰
+    </button>
+</header>
+
+<div class="menu-overlay"></div>
+
+<nav class="mobile-menu" id="mobile-menu"
+    aria-label="Mobile navigation">
+    <button class="menu-close" aria-label="Close menu">✕</button>
+    <a href="index.html" class="active">Home</a>
+    <a href="socials.html">Socials</a>
+</nav>
+
 
   <main>
     <section>
