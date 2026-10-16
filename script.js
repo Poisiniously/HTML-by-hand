@@ -44,7 +44,6 @@ document.title = pageTitles[page];
             }
         });
 
-        closeMenu();
     } catch (error) {
         console.error("Could not load page:", error);
         pageContent.innerHTML =
