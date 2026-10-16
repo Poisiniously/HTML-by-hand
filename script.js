@@ -1,26 +1,5 @@
 //made by AI because i can´t java script
-const menuToggle = document.querySelector(".menu-toggle");
-const menuClose = document.querySelector(".menu-close");
-const menuOverlay = document.querySelector(".menu-overlay");
 const pageContent = document.querySelector("#page-content");
-
-function closeMenu() {
-    document.body.classList.remove("menu-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
-}
-
-function openMenu() {
-    document.body.classList.add("menu-open");
-    menuToggle?.setAttribute("aria-expanded", "true");
-}
-
-menuToggle?.addEventListener("click", openMenu);
-menuClose?.addEventListener("click", closeMenu);
-menuOverlay?.addEventListener("click", closeMenu);
-
-document.addEventListener("keydown", event => {
-    if (event.key === "Escape") closeMenu();
-});
 
 async function loadPage(page) {
     const allowedPages = ["home", "socials"];
@@ -45,6 +24,15 @@ async function loadPage(page) {
         const documentPage = parser.parseFromString(html, "text/html");
 
         pageContent.innerHTML = documentPage.body.innerHTML;
+
+    
+        // Dynamischen Seitentitel setzen
+        const pageTitles = {
+          home: "Poisiniously | Home",
+          socials: "Poisiniously | Socials"
+        };
+
+document.title = pageTitles[page];
 
         document.querySelectorAll("[data-page]").forEach(link => {
             const active = link.dataset.page === page;

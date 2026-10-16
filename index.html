@@ -7,66 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
 
-    <title>Poisiniously</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
-        rel="stylesheet"
-    >
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-    <link
-        href="https://fonts.googleapis.com/css?family=B612+Mono:regular,italic,700,700italic"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono:regular,italic,700,700italic" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
         <a class="brand" href="#home">Poisiniously</a>
 
-        <nav class="desktop-nav" aria-label="Main navigation">
+        <nav class="nav" aria-label="Main navigation">
             <a href="#home" class="active" data-page="home">Home</a>
             <a href="#socials" data-page="socials">Socials</a>
         </nav>
-
-        <button
-            class="menu-toggle"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            type="button"
-        >
-            ☰
-        </button>
     </header>
-
-    <div class="menu-overlay"></div>
-
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-        <button class="menu-close" aria-label="Close menu" type="button">
-            ✕
-        </button>
-
-        <a href="#home" class="active" data-page="home">Home</a>
-        <a href="#socials" data-page="socials">Socials</a>
-    </nav>
 
     <main id="page-content">
         <p>Loading...</p>
     </main>
 
     <footer class="footer">
-        <div>© 2026 Poisiniously</div>
+        <div>© 2026 Poisiniously
         <br>
-        <a href="README.md" target="_blank" rel="noopener noreferrer">README</a>
+        <a href="README.md" target="_blank" rel="noopener noreferrer" class="underline">README</a></div>
     </footer>
 
     <script src="script.js" defer></script>
