@@ -102,8 +102,6 @@ a {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding-left: auto;
-    padding-top: auto;
     justify-content: left;
     background-color: var(--card-bg);
     border-radius: 10px;
@@ -131,6 +129,12 @@ a {
     height: 100%;
     box-sizing: border-box;
     padding: 5px 10px;
+}
+
+.icon {
+    width: 40px;
+    margin: 5px;
+    margin-right: 10px;
 }
 
 
