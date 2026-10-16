@@ -4,14 +4,13 @@
   --text-color: #111111;
   --accent-color: #7C3AED;
   --card-bg: #f5f5f7;
-  --border-color: #343447;
+  --border-color: #9400D3;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #111111;
     --text-color: #eeeeee;
-    --card-bg: #1e1e1e;
-    --border-color: #aaaaaa;
+    --card-bg: #1e1e1e;;
   }
 }
 
@@ -33,15 +32,6 @@ a {
   text-decoration: none;
 }
 
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 2%;
-  border-bottom: 1px solid #343447;
-}
-
 .brand {
   font-family: 'JetBrains Mono', monospace;
   font-size: 2em;
@@ -51,26 +41,34 @@ a {
   height: 40px;
 }
 
-.site-header nav {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 2%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header nav {
   display: flex;
   gap: 24px;
 }
 
-.site-header nav a {
+.header nav a {
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.site-header nav a:hover {
+.header nav a:hover {
   color: var(--accent-color);
 }
 
-.site-header nav a.active {
+.header nav a.active {
   font-weight: 700;
 }
 
-.site-header nav a.active::after {
+.header nav a.active::after {
   content: '';
   display: block;
   width: 100%;
@@ -79,18 +77,15 @@ a {
   margin-top: 4px;
 }
 
-.site-footer {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-top: 60px;
     padding: 20px 2%;
-
     border-top: 1px solid var(--border-color);
-    color: var(--text-color);
+    color: var(--accent-color);
     opacity: 0.7;
-
     font-family: 'Roboto Mono', monospace;
     font-size: 0.85rem;
 }
@@ -141,13 +136,12 @@ a {
 
 /*made by AI*/
 @media (max-width: 600px) {
-    .site-footer {
+    .footer {
         padding: 18px 4%;
         font-size: 0.75rem;
     }
 }
 
-/*mobile menu*/
 .menu-toggle,
 .mobile-menu,
 .menu-overlay {
@@ -162,9 +156,8 @@ a {
     cursor: pointer;
 }
 
-/* mobile layout */
 @media (max-width: 600px) {
-    .site-header {
+    .header {
         justify-content: space-between;
     }
 
