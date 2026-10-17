@@ -157,3 +157,7 @@ body {
   border: 0;
   border-radius: 10px;
 }
+
+.text-icon {
+  height: 16px;
+}

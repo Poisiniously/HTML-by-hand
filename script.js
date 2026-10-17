@@ -12,7 +12,7 @@ async function loadPage(page) {
         home: "pages/home.html",
         socials: "pages/socials.html",
         info: "pages/info.html",
-        projects: "pages/projects"
+        projects: "pages/projects.html"
     };
     const file = pageFiles[page];
 
