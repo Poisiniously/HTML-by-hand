@@ -2,16 +2,19 @@
 const pageContent = document.querySelector("#page-content");
 
 async function loadPage(page) {
-    const allowedPages = ["home", "socials"];
+    const allowedPages = ["home", "socials", "info"];
 
     if (!allowedPages.includes(page)) {
         page = "home";
     }
 
-    const file = page === "home"
-    ? "pages/home.html"
-    : "pages/socials.html";
-
+    const pageFiles {
+        home: "pages/home.html",
+        socials: "pages/socials.html",
+        info: "pages/info.html"
+    }    
+    const file = pageFiles[page];
+    
     try {
         const response = await fetch(file);
 
@@ -26,7 +29,7 @@ async function loadPage(page) {
         pageContent.innerHTML = documentPage.body.innerHTML;
 
     if (page === "home") {
-        const oldScript =document.getElementById("latest-video_script");
+        const oldScript =document.getElementById("latest-video-script");
         oldScript?.remove();
 
         const videoScript = document.createElement("script");
@@ -40,6 +43,7 @@ async function loadPage(page) {
         const pageTitles = {
           home: "Poisiniously | Home",
           socials: "Poisiniously | Socials"
+          info: "Poisiniously | Info"
         };
 
 document.title = pageTitles[page];

@@ -1,25 +1,50 @@
 const channelId = "UCK1l24pu2VfM78fdtHYMQzQ";
+
 const feedUrl =
     `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
 
-const apiUrl =
-    `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+const proxyUrl = `https://proxy.cors.dev/${feedUrl}`;
 
-fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        if (!data.items || data.items.length === 0) {
-            throw new Error("No videos found.");
+async function loadLatestVideo() {
+    const player = document.getElementById("latest-video");
+
+    if (!player) {
+        console.error("YouTube player not found.");
+        return;
+    }
+
+    try {
+        const response = await fetch(proxyUrl);
+
+        if (!response.ok) {
+            throw new Error(`Feed request failed: HTTP ${response.status}`);
         }
 
-        const videoUrl = data.items[0].link;
-        const videoId = new URL(videoUrl).searchParams.get("v");
+        const xmlText = await response.text();
+        const xml = new DOMParser().parseFromString(
+            xmlText,
+            "application/xml"
+        );
+
+        if (xml.querySelector("parsererror")) {
+            throw new Error("The YouTube feed could not be parsed.");
+        }
+
+        const entry = xml.querySelector("entry");
+        const videoId = entry
+            ?.getElementsByTagNameNS("*", "videoId")[0]
+            ?.textContent
+            ?.trim();
 
         if (!videoId) {
-            throw new Error("Could not determine video ID.");
+            throw new Error("No video found in the YouTube feed.");
         }
 
-        document.getElementById("latest-video").src =
-            `https://www.youtube.com/embed/${videoId}`;
-    })
-    .catch(error => console.error("YouTube video error:", error));
+        player.src =
+            `https://www.youtube-nocookie.com/embed/${videoId}`;
+    } catch (error) {
+        console.error("YouTube video error:", error);
+    }
+}
+
+loadLatestVideo();
