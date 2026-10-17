@@ -158,6 +158,18 @@ body {
   border-radius: 10px;
 }
 
-.text-icon {
-  height: 16px;
+.big-icon {
+  height: 70px;
+  margin: 5px;
+
+}
+
+.project-title {
+  text-align: center;
+  font-size: medium;
+}
+
+.project-description {
+  text-align: left;
+  font-size: small;
 }
