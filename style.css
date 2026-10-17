@@ -4,7 +4,7 @@
   --text-color: #111111;
   --card-bg: #eeeeee;
   --accent-color: #7C3AED;
-  --border-color: #9400D3;
+  --border-color: #7C3AED;
   --link-color: #23003a;
 }
 @media (prefers-color-scheme: dark) {
@@ -25,11 +25,11 @@ body {
 
 .card {
   background-color: var(--card-bg);
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   width: auto;
   height: auto;
-  margin: 5px;
+  margin: 10px;
 }
 
 .brand {
@@ -150,7 +150,7 @@ body {
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16 / 9;
-  margin: 24px auto;
+  margin: 10px;
 }
 
 .youtube-video iframe {
