@@ -5,12 +5,14 @@
   --card-bg: #eeeeee;
   --accent-color: #7C3AED;
   --border-color: #9400D3;
+  --link-color: #23003a;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #111111;
+    --bg-color: #16181C;
     --text-color: #eeeeee;
-    --card-bg: #1e1e1e;;
+    --card-bg: #1e1e1e;
+    --link-color: #f7eaff;
   }
 }
 
@@ -172,4 +174,8 @@ body {
 .project-description {
   text-align: left;
   font-size: small;
+}
+
+a {
+  color: var(--link-color);
 }
