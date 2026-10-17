@@ -8,13 +8,13 @@ async function loadPage(page) {
         page = "home";
     }
 
-    const pageFiles {
+    const pageFiles = {
         home: "pages/home.html",
         socials: "pages/socials.html",
         info: "pages/info.html"
-    }    
+    };
     const file = pageFiles[page];
-    
+
     try {
         const response = await fetch(file);
 
@@ -42,7 +42,7 @@ async function loadPage(page) {
         // Dynamischen Seitentitel setzen
         const pageTitles = {
           home: "Poisiniously | Home",
-          socials: "Poisiniously | Socials"
+          socials: "Poisiniously | Socials",
           info: "Poisiniously | Info"
         };
 
