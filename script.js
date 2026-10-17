@@ -2,7 +2,7 @@
 const pageContent = document.querySelector("#page-content");
 
 async function loadPage(page) {
-    const allowedPages = ["home", "socials", "info"];
+    const allowedPages = ["home", "socials", "info", "projects"];
 
     if (!allowedPages.includes(page)) {
         page = "home";
@@ -11,7 +11,8 @@ async function loadPage(page) {
     const pageFiles = {
         home: "pages/home.html",
         socials: "pages/socials.html",
-        info: "pages/info.html"
+        info: "pages/info.html",
+        projects: "pages/projects"
     };
     const file = pageFiles[page];
 
@@ -39,11 +40,12 @@ async function loadPage(page) {
     }
 
     
-        // Dynamischen Seitentitel setzen
+        // page title
         const pageTitles = {
           home: "Poisiniously | Home",
           socials: "Poisiniously | Socials",
-          info: "Poisiniously | Info"
+          info: "Poisiniously | Info",
+          projects: "Poisiniously | Projects"
         };
 
 document.title = pageTitles[page];
