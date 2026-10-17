@@ -25,6 +25,16 @@ async function loadPage(page) {
 
         pageContent.innerHTML = documentPage.body.innerHTML;
 
+    if (page === "home") {
+        const oldScript =document.getElementById("latest-video_script");
+        oldScript?.remove();
+
+        const videoScript = document.createElement("script");
+        videoScript.id = "latest-video-script";
+        videoScript.src = "latest-video.js";
+        document.body.appendChild(videoScript);
+    }
+
     
         // Dynamischen Seitentitel setzen
         const pageTitles = {
